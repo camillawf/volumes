@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Volumes{
+	public static void main(String[] args){
+	int escolha;
+	Scanner leitor = new Scanner(System.in);
+	System.out.println("Calculo de volumes. Insira o numero que representa o seu solido geometrico: 1- paralelepipedo, 2- cilindro, 3- esfera e 4-piramide: " );
+	escolha = leitor.nextLine().charAt(0);
+	switch(escolha){
+	case '1':
+		System.out.println("Digite a largura ");
+		double lg = leitor.nextDouble();
+		System.out.println("Altura ");
+		double a = leitor.nextDouble();
+		System.out.println("Comprimento ");
+		double cm = leitor.nextDouble();
+		double volume = (lg*a*cm);
+		System.out.println("Volume = " +volume);
+		break;
+	case '2':
+		System.out.println("Raio: ");
+		double R = leitor.nextDouble();
+		System.out.println("Digite o valor da altura: ");
+		double H = leitor.nextDouble();
+		double volume1 = (Math.PI*(R*R)*H);
+		System.out.println("Volume =" +volume1);
+		break;
+	case '3':
+		System.out.println("Raio: ");
+		double r = leitor.nextDouble();
+		double volume2 = (4*Math.PI*(r*r*r))/3;
+		System.out.println("Volume = " +volume2);
+		break;
+	case '4':
+		System.out.println("Base: ");
+		double b = leitor.nextDouble();
+		System.out.println("Altura ");
+		double al = leitor.nextDouble();
+		double volume4 = (b*al)/3;
+		System.out.println("Volume = " +volume4);
+		}
+	}
+}		
